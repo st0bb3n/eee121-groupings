@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+bool is_prime(int x)
+{
+ int ctr = 0;
+ int i;
+ 
+ if (x == 2){
+     return false;
+ }
+ for (i = x; i != 1; i--)
+ {
+        if (x % i == 0) 
+        {
+            ctr += 1;
+//            cout << ctr << endl;
+        }
+        else
+        {
+            ctr += 0;
+//            cout << ctr << endl;
+        }
+ }
+ 
+ if (ctr <= 2)
+ {
+// cout << "True" << endl;
+return true;
+ }
+ else{
+//     cout << "False" <<endl;
+return false;
+ }
+ 
+ 
+}
+
+int main(){
+bool a = is_prime(2); //False
+cout << a;
+}
